@@ -1,0 +1,34 @@
+{% extends 'flatpages/default.html' %}
+<!--<!DOCTYPE html>-->
+<!--<html lang="en">-->
+<!--<head>-->
+<!--    <meta charset="UTF-8">-->
+<!--    <title>{{ flatpage.title}}</title>-->
+<!--</head>-->
+<!--<body>-->
+<!--{{flatpage.content}}-->
+<!--<p>начало вставки include</p>-->
+<!--{% include 'flatpages/inc.html' %}-->
+<!--<p>конец вставки include</p>-->
+<!--<h3>Skill Factory</h3>-->
+<!--<div>-->
+<!--    {{ flatpage.comment }}-->
+<!--</div>-->
+<!--</body>-->
+<!--</html>-->
+
+
+
+{% block title %}
+{{ flatpage.title }}
+{% endblock title %}
+
+{% block content %}
+<h3>{{ flatpage.content }}</h3>
+
+<p>начало вставки include</p>
+{% include 'flatpages/inc.html' %}
+<p>конец вставки include</p>
+
+<h3>Skill Factory</h3>
+{% endblock content %}
